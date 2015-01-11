@@ -45,75 +45,41 @@ skel.init({
 			}
 		}
 	}
-
-
 });
 
-$(document).ready(function() {
+function clickEvent(element) {
+	
     $.ajax({
-        url : "default.html",
-        dataType: "text",
-        success : function (data) {
-            $("#content").html(data);
-            $('.flexslider').flexslider({
-            	controlNav: true,
-            	directionNav: true,
-            	animation: "slide",
-				slideshowSpeed: 2000
-            });
-        }
-    });
-
-    $(".inicio").click(function() {
-    	$.ajax({
-	        url : "default.html",
-	        dataType: "text",
-	        success : function (data) {
-	            $("#content").html(data);
-	            $('.flexslider').flexslider({
-	            	controlNav: true,
-	            	directionNav: true,
-	            	animation: "slide",
+	   	url : element + ".html",
+	   	dataType: "text",
+	   	success : function (data) {
+	   		$("#content").html(data);
+	   		if(!element.localeCompare("default")) {
+		    	$('.flexslider').flexslider({
+		          	controlNav: true,
+		           	directionNav: true,
+		           	animation: "slide",
 					slideshowSpeed: 2000
-	            });
-	        }
-	    });
+		        });
+		    }
+	   	}
+	});
+}
+
+$(document).ready(function() {
+	clickEvent('default');
+
+	$("#title").click(function() {
+     	var element = 'default';
+     	$('li').removeClass('active');
+     	$("#default").addClass('active');
+     	clickEvent(element);	
     });
 
-     $("#habitaciones").click(function() {
+    $("li").click(function() {
+     	var element = $(this).attr('id');
      	$('li').removeClass('active');
      	$(this).addClass('active');
-    	$.ajax({
-	        url : "habitaciones.html",
-	        dataType: "text",
-	        success : function (data) {
-	            $("#content").html(data);
-	        }
-	    });
+     	clickEvent(element);
     });
-
-    $("#ubicacion").click(function() {
-    	$(this).addClass('active');
-    	$.ajax({
-	        url : "ubicacion.html",
-	        dataType: "text",
-	        success : function (ubicacion) {
-	            $("#content").html(ubicacion);
-	        }
-	    });
-    });
-
-    
-
-     $("#contacto").click(function() {
-    	$(this).addClass('active');
-    	$.ajax({
-	        url : "contacto.html",
-	        dataType: "text",
-	        success : function (data) {
-	            $("#content").html(data);
-	        }
-	    });
-    });
-
 });
