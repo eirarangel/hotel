@@ -47,39 +47,11 @@ skel.init({
 	}
 });
 
-function clickEvent(element) {
-	
-    $.ajax({
-	   	url : element + ".html",
-	   	dataType: "text",
-	   	success : function (data) {
-	   		$("#content").html(data);
-	   		if(!element.localeCompare("default")) {
-		    	$('.flexslider').flexslider({
-		          	controlNav: true,
-		           	directionNav: true,
-		           	animation: "slide",
-					slideshowSpeed: 2000
-		        });
-		    }
-	   	}
-	});
-}
-
 $(document).ready(function() {
-	clickEvent('default');
-
-	$("#title").click(function() {
-     	var element = 'default';
-     	$('li').removeClass('active');
-     	$("#default").addClass('active');
-     	clickEvent(element);	
-    });
-
-    $("li").click(function() {
-     	var element = $(this).attr('id');
-     	$('li').removeClass('active');
-     	$(this).addClass('active');
-     	clickEvent(element);
-    });
+	$('.flexslider').flexslider({
+		controlNav: true,
+		directionNav: true,
+		animation: "slide",
+		slideshowSpeed: 2000
+	});
 });
