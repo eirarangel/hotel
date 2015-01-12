@@ -10,9 +10,13 @@
 		<link href="css/flexslider.css" rel="stylesheet">		
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/style-desktop.css"  rel="stylesheet">
+		<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+
 
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+
 		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.fancybox.pack.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
@@ -72,56 +76,72 @@
 							</header>
 							<div>
 								<div class="hb_item">
-								<div class="hb_titulo" id="sencilla">Habitacion Sencilla </div>
-									<img width="400px"  src="img/sencilla/IMG_1434.JPG" alt>
-									<div class="hb_sublist">									
-										<li><img src="img/sencilla/IMG_1435.JPG"></li>
-										<li><img src="img/sencilla/IMG_1439.JPG"></li>
-									</div>
-								</div>
-								<div class="hb_item">
-									<div class="hb_titulo" id="doble">Habitacion Doble </div>
-									<img width="400px" src="img/doble/IMG_1480.JPG">
+
+								<div class="hb_titulo">Habitacion Sencilla </div>
+									<a class="fancybox" rel="sencilla" href="img/sencilla/IMG_1434.JPG">
+									<img width="400px"  src="img/sencilla/IMG_1434.JPG"></a>
 									<div class="hb_sublist">
-										<li><img src="img/doble/IMG_1486.JPG"></li>
-										<li><img src="img/doble/IMG_1479.JPG"></li>
+										<li><a class="fancybox" rel="sencilla" href="img/sencilla/IMG_1435.JPG"><img src="img/sencilla/IMG_1435.JPG"></a></li>
+										<li><a class="fancybox" rel="sencilla" href="img/sencilla/IMG_1439.JPG"><img src="img/sencilla/IMG_1439.JPG"></a></li>
 									</div>
 								</div>
 								<div class="hb_item">
-									<div class="hb_titulo" id="triple">Habitacion Triple </div>
-									<img width="400px" src="img/triple/IMG_1454.JPG">
-									<div class="hb_sublist">	
-										<li><img src="img/triple/IMG_1457.JPG"></li>
-										<li><img src="img/triple/IMG_1449.JPG"></li>
-									</div>
-								</div>
-								<div class="hb_item">
-									<div class="hb_titulo" id="suite">Habitacion con Jacuzzy </div>
-									<img width="400px" src="img/suite/IMG_1459.JPG">
+									<div class="hb_titulo">Habitacion Doble </div>
+									<a class="fancybox" rel="doble" href="img/doble/IMG_1480.JPG"><img width="400px" src="img/doble/IMG_1480.JPG"></a>
 									<div class="hb_sublist">
-										<li><img src="img/suite/IMG_1462.JPG"></li>
-										<li><img src="img/suite/IMG_1465.JPG"></li>
-										<li><img src="img/suite/IMG_1475.JPG"></li>
+										<li><a class="fancybox" rel="doble" href="img/doble/IMG_1486.JPG"><img src="img/doble/IMG_1486.JPG"></a></li>
+										<li><a class="fancybox" rel="doble" href="img/doble/IMG_1479.JPG"><img src="img/doble/IMG_1479.JPG"></a></li>
+									</div>
+								</div>
+								<div class="hb_item">
+									<div class="hb_titulo">Habitacion Triple </div>
+									<a class="fancybox" rel="triple" href="img/triple/IMG_1454.JPG"><img width="400px" src="img/triple/IMG_1454.JPG"></a>
+									<div class="hb_sublist">
+										<li><a class="fancybox" rel="triple" href="img/triple/IMG_1457.JPG"><img src="img/triple/IMG_1457.JPG"></a></li>
+										<li><a class="fancybox" rel="triple" href="img/triple/IMG_1449.JPG"><img src="img/triple/IMG_1449.JPG"></a></li>
+									</div>
+								</div>
+								<div class="hb_item">
+									<div class="hb_titulo">Habitacion con Jacuzzy </div>
+									<a class="fancybox" rel="suite" href="img/suite/IMG_1459.JPG"><img width="400px" src="img/suite/IMG_1459.JPG"></a>
+
+									<div class="hb_sublist">
+										<li><a class="fancybox" rel="suite" href="img/suite/IMG_1462.JPG"><img src="img/suite/IMG_1462.JPG"></a></li>
+										<li><a class="fancybox" rel="suite" href="img/suite/IMG_1465.JPG"><img src="img/suite/IMG_1465.JPG"></a></li>
+										<li><a class="fancybox" rel="suite" href="img/suite/IMG_1475.JPG"><img src="img/suite/IMG_1475.JPG"></a></li>
 									</div>
 								</div>
 							</div>
 						</section>
 					</div>
 					
+
 					<div class="5u">
-						<section class="sidebar">
+						<section>
 							<header>
-								<h2 style="color:#ff0000">Las habitaciones cuentan con</h2>
+								<h2 style="color:#ff0000">Precios</h2>
 							</header>
 							<ul class="style1">
-								<li>Aire Acondicionado</li>
-								<li>Calefacción</li>
-								<li>Seguridad las 24 Horas</li>
-								<li>Estacionamiento</li>
-								<li>Agua Caliente en Todas las Habitaciones</li>
-								<li>WIFI Gratuito</li>
-								<li>TV por Cable</li>
-								<li>Room Service las 24 Horas</li>
+								<li>
+									<h4><strong style="color:#ff0000">Junior</strong></h4>
+									<span style="color:#ff0000">$350.00 MXN</span> Domingo - Jueves<br />
+									<span style="color:#ff0000">$490.00 MXN</span> Viernes y Sabado<br />
+								</li>
+								<li>
+									<h4><strong style="color:#ff0000">Doble</strong></h4>
+									<span style="color:#ff0000">$450.00 MXN</span> Domingo - Jueves<br />
+									<span style="color:#ff0000">$490.00 MXN</span> Viernes y Sabado<br />
+								</li>
+								<li>
+									<h4><strong style="color:#ff0000">Triple</strong></h4>
+									<span style="color:#ff0000">$560.00 MXN</span> Domingo - Jueves<br />
+									<span style="color:#ff0000">$690.00 MXN</span> Viernes y Sabado<br />
+								</li>
+								<li>
+									<h4><strong style="color:#ff0000">Jacuzzy</strong></h4>
+									<span style="color:#ff0000">$560.00 MXN</span> Domingo - Jueves<br />
+									<span style="color:#ff0000">$690.00 MXN</span> Viernes y Sabado<br />
+								</li>																
 							</ul>
 						</section>	
 					</div>
