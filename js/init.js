@@ -49,8 +49,6 @@ skel.init({
 
 $(document).ready(function() {
 	$('.flexslider').flexslider({
-		controlNav: true,
-		directionNav: true,
 		animation: "slide",
 		slideshowSpeed: 2000
 	});
