@@ -54,4 +54,5 @@ $(document).ready(function() {
 		animation: "slide",
 		slideshowSpeed: 2000
 	});
+	$(".fancybox").fancybox();
 });
